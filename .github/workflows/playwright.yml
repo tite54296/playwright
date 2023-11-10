@@ -72,3 +72,8 @@ jobs:
                 exit 0
               fi
           done
+      - name: Output Report URL as Worfklow Annotation
+        run: |
+          FULL_HTML_REPORT_URL=https://tite54296.github.io/playwright/$HTML_REPORT_URL_PATH
+
+          echo "::notice title=📋 Published Playwright Test Report::$FULL_HTML_REPORT_URL"
